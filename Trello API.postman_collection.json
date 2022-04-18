@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "32f96b5e-8d13-4140-a27c-295076a14aaa",
+		"name": "Trello API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CRUD Trello",
+			"item": [
+				{
+					"name": "create new board x",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://api.trello.com/1/boards/?name=Nowa tablica&key=1q2w3e4r5t6y &token=mnbvcxzasdfghjklpo",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"boards",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Nowa tablica"
+								},
+								{
+									"key": "key",
+									"value": "1q2w3e4r5t6y "
+								},
+								{
+									"key": "token",
+									"value": "mnbvcxzasdfghjklpo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a board x",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://trello.com/magdapotrec/boards/625ad725a2966140760a88f2?key=1q2w3e4r5t6y &token=mnbvcxzasdfghjklpo",
+							"protocol": "https",
+							"host": [
+								"trello",
+								"com"
+							],
+							"path": [
+								"magdapotrec",
+								"boards",
+								"625ad725a2966140760a88f2"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "1q2w3e4r5t6y "
+								},
+								{
+									"key": "token",
+									"value": "mnbvcxzasdfghjklpo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change board name by id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://api.trello.com/1/boards/625ad725a2966140760a88f2?key=1q2w3e4r5t6y &token=mnbvcxzasdfghjklpo&name=Nowa tablica x1&=",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"boards",
+								"625ad725a2966140760a88f2"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "1q2w3e4r5t6y "
+								},
+								{
+									"key": "token",
+									"value": "mnbvcxzasdfghjklpo"
+								},
+								{
+									"key": "name",
+									"value": "Nowa tablica x1"
+								},
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete board by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/boards/625ad725a2966140760a88f2?key=1q2w3e4r5t6y &token=mnbvcxzasdfghjklpo",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"boards",
+								"625ad725a2966140760a88f2"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "1q2w3e4r5t6y "
+								},
+								{
+									"key": "token",
+									"value": "mnbvcxzasdfghjklpo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get boards",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://trello.com/magdapotrec/boards/6248a9804616356f70a70757?key=1q2w3e4r5t6y &token=mnbvcxzasdfghjklpo",
+					"protocol": "https",
+					"host": [
+						"trello",
+						"com"
+					],
+					"path": [
+						"magdapotrec",
+						"boards",
+						"6248a9804616356f70a70757"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "1q2w3e4r5t6y "
+						},
+						{
+							"key": "token",
+							"value": "mnbvcxzasdfghjklpo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list boards",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.trello.com/1/members/me/boards?key=1q2w3e4r5t6y &token=mnbvcxzasdfghjklpo",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"members",
+						"me",
+						"boards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "1q2w3e4r5t6y "
+						},
+						{
+							"key": "token",
+							"value": "mnbvcxzasdfghjklpo"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
